@@ -20,13 +20,13 @@ if(localStorage.getItem("bestBrain")){
     }
 }
 const traffic=[
-    new Car(road.getLaneCenter(1),-100,30,50,"DUMMY",2),
-    new Car(road.getLaneCenter(0),-300,30,50,"DUMMY",2),
-    new Car(road.getLaneCenter(2),-300,30,50,"DUMMY",2),
-    new Car(road.getLaneCenter(0),-500,30,50,"DUMMY",2),
-    new Car(road.getLaneCenter(1),-500,30,50,"DUMMY",2),
-    new Car(road.getLaneCenter(1),-700,30,50,"DUMMY",2),
-    new Car(road.getLaneCenter(2),-700,30,50,"DUMMY",2),
+    new Car(road.getLaneCenter(1),-100,30,50,"DUMMY",2,getRandomColor()),
+    new Car(road.getLaneCenter(0),-300,30,50,"DUMMY",2,getRandomColor()),
+    new Car(road.getLaneCenter(2),-300,30,50,"DUMMY",2,getRandomColor()),
+    new Car(road.getLaneCenter(0),-500,30,50,"DUMMY",2,getRandomColor()),
+    new Car(road.getLaneCenter(1),-500,30,50,"DUMMY",2,getRandomColor()),
+    new Car(road.getLaneCenter(1),-700,30,50,"DUMMY",2,getRandomColor()),
+    new Car(road.getLaneCenter(2),-700,30,50,"DUMMY",2,getRandomColor()),
 ];
 
 animate();
@@ -42,7 +42,7 @@ function discard(){
 function generateCars(N){
     const cars=[]
     for (let i = 0; i <= N; i++) {
-        cars.push(new Car(road.getLaneCenter(1),100,30,50,"AI"))
+        cars.push(new Car(road.getLaneCenter(1),100,30,50,"AI")) // KEYS kan gebruikt worden om zelf te sturen en AI voor de ai
     }
     return cars;
 
