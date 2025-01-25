@@ -36,7 +36,6 @@ function generateCars(N){
         cars.push(new Car(road.getLaneCenter(1),100,30,50,"AI"))
     }
     return cars;
-
 }
 
 function animate(time){
